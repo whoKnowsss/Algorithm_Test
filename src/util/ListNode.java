@@ -8,10 +8,10 @@ import com.sun.xml.internal.bind.v2.schemagen.xmlschema.List;
  * @Description: 链表工具
  */
 public class ListNode implements Cloneable {
-    int val;
-    ListNode next;
+    public int val;
+    public ListNode next;
 
-    ListNode(int val) {
+    public ListNode(int val) {
         this.val = val;
     }
 
@@ -38,18 +38,43 @@ public class ListNode implements Cloneable {
         return temp;
     }
 
-    //遍历 反转 返回头节点
-    public static ListNode traverse(ListNode head) {
+    //   1 -> 2 -> 3 -> 4 -> 5
+    //通过遍历 反转 返回头节点
+    public static ListNode reverseTraverse(ListNode head) {
         if (head == null || head.next == null) return head;
-        ListNode left, current, right = null;
+        ListNode left = null, current = null, right = null;
         for (left = head, current = head.next, right = current.next; right != null; right = right.next) {
             current.next = left;
             left = current;
             current = right;
         }
-        current.next = left;
         head.next = null;
+        current.next = left;
         return current;
+    }
+
+
+    //   1 -> 2 -> 3 -> 4 -> 5
+    //通过递归 反转 返回头节点
+    public static ListNode reverseRecursive(ListNode head) {
+        if (head.next == null) return head;  //base case
+        ListNode last = reverseRecursive(head.next);
+        head.next.next = head;
+        head.next = null;
+        return last;
+
+    }
+
+    //   1 -> 2 -> 3 -> 4 -> 5
+    //通过递归 反转 返回头节点   翻转链表前n个节点
+    ListNode temp = null;
+
+    public static ListNode reverseRecursive(ListNode head, int n) {
+        if (head.next == null || n == 1) return head;  //base case
+        ListNode last = reverseRecursive(head.next, n - 1);
+        head.next.next = head;
+        head.next = null;
+        return last;
     }
 
     public static void main(String[] args) {
@@ -68,7 +93,7 @@ public class ListNode implements Cloneable {
             System.out.println(clonedTemp);
             System.out.println(node);
 
-            System.out.println(traverse(clonedTemp));
+            System.out.println(reverseRecursive(clonedTemp));
         } catch (CloneNotSupportedException e) {
             e.printStackTrace();
         }

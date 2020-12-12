@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="aa16ca4c-5d12-4ec8-9b1c-71e8cb9644e5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/common/sort/MergeSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/sort/MergeSort.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/util/ListNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/util/ListNode.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -66,8 +63,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MergeSort" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="common.sort.MergeSort" />
+    <configuration name="QuickSort" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="common.sort.QuickSort" />
       <module name="Algorithm_Test" />
       <extension name="coverage">
         <pattern>
@@ -79,12 +76,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="QuickSort" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="common.sort.QuickSort" />
+    <configuration name="ReverseLinkedList2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="leetcode.listnode.medium.ReverseLinkedList2" />
       <module name="Algorithm_Test" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="common.sort.*" />
+          <option name="PATTERN" value="leetcode.listnode.medium.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -105,13 +102,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -119,10 +118,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.ListNode" />
+        <item itemvalue="Application.ReverseLinkedList2" />
         <item itemvalue="Application.ShuffleString" />
         <item itemvalue="Application.Main" />
         <item itemvalue="Application.QuickSort" />
-        <item itemvalue="Application.MergeSort" />
       </list>
     </recent_temporary>
   </component>
@@ -143,7 +142,8 @@
       <workItem from="1607264467651" duration="2401000" />
       <workItem from="1607320649767" duration="19452000" />
       <workItem from="1607417867992" duration="8736000" />
-      <workItem from="1607588204172" duration="8951000" />
+      <workItem from="1607588204172" duration="9273000" />
+      <workItem from="1607668911736" duration="23005000" />
     </task>
     <task id="LOCAL-00001" summary="插入排序+选择排序">
       <created>1607328728374</created>
@@ -152,7 +152,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607328728374</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="链表">
+      <created>1607653367563</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1607653367563</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -172,61 +179,62 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="插入排序+选择排序" />
-    <option name="LAST_COMMIT_MESSAGE" value="插入排序+选择排序" />
+    <MESSAGE value="链表" />
+    <option name="LAST_COMMIT_MESSAGE" value="链表" />
   </component>
   <component name="WindowStateProjectService">
     <state x="3199" y="-91" key="#com.intellij.ide.util.MemberChooser" timestamp="1607494638927">
       <screen x="1920" y="-348" width="2048" height="1112" />
     </state>
     <state x="3199" y="-91" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040/1920.-348.2048.1112@1920.-348.2048.1112" timestamp="1607494638927" />
-    <state x="2422" y="-17" width="684" height="596" key="#xdebugger.evaluate" timestamp="1607499105641">
+    <state x="3160" y="21" width="684" height="596" key="#xdebugger.evaluate" timestamp="1607701515538">
       <screen x="1920" y="-348" width="2048" height="1112" />
     </state>
-    <state x="2422" y="-17" width="684" height="596" key="#xdebugger.evaluate/0.0.1920.1040/1920.-348.2048.1112@1920.-348.2048.1112" timestamp="1607499105641" />
-    <state x="3049" y="-225" key="CommitChangelistDialog2" timestamp="1607328727719">
+    <state x="3160" y="21" width="684" height="596" key="#xdebugger.evaluate/0.0.1920.1040/1920.-348.2048.1112@1920.-348.2048.1112" timestamp="1607701515538" />
+    <state x="3049" y="-225" key="CommitChangelistDialog2" timestamp="1607653366770">
       <screen x="1920" y="-348" width="2048" height="1112" />
     </state>
-    <state x="3049" y="-225" key="CommitChangelistDialog2/0.0.1920.1040/1920.-348.2048.1112@1920.-348.2048.1112" timestamp="1607328727719" />
-    <state width="2005" height="245" key="GridCell.Tab.0.bottom" timestamp="1607604836421">
+    <state x="3049" y="-225" key="CommitChangelistDialog2/0.0.1920.1040/1920.-348.2048.1112@1920.-348.2048.1112" timestamp="1607653366770" />
+    <state width="2005" height="322" key="GridCell.Tab.0.bottom" timestamp="1607763932674">
       <screen x="1920" y="-348" width="2048" height="1112" />
     </state>
     <state width="1877" height="245" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.-348.2048.1112@0.0.1920.1040" timestamp="1607588399348" />
-    <state width="2005" height="245" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.-348.2048.1112@1920.-348.2048.1112" timestamp="1607604836421" />
-    <state width="2005" height="245" key="GridCell.Tab.0.center" timestamp="1607604836421">
+    <state width="2005" height="322" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.-348.2048.1112@1920.-348.2048.1112" timestamp="1607763932674" />
+    <state width="2005" height="322" key="GridCell.Tab.0.center" timestamp="1607763932674">
       <screen x="1920" y="-348" width="2048" height="1112" />
     </state>
     <state width="1877" height="245" key="GridCell.Tab.0.center/0.0.1920.1040/1920.-348.2048.1112@0.0.1920.1040" timestamp="1607588399348" />
-    <state width="2005" height="245" key="GridCell.Tab.0.center/0.0.1920.1040/1920.-348.2048.1112@1920.-348.2048.1112" timestamp="1607604836421" />
-    <state width="2005" height="245" key="GridCell.Tab.0.left" timestamp="1607604836421">
+    <state width="2005" height="322" key="GridCell.Tab.0.center/0.0.1920.1040/1920.-348.2048.1112@1920.-348.2048.1112" timestamp="1607763932674" />
+    <state width="2005" height="322" key="GridCell.Tab.0.left" timestamp="1607763932674">
       <screen x="1920" y="-348" width="2048" height="1112" />
     </state>
     <state width="1877" height="245" key="GridCell.Tab.0.left/0.0.1920.1040/1920.-348.2048.1112@0.0.1920.1040" timestamp="1607588399347" />
-    <state width="2005" height="245" key="GridCell.Tab.0.left/0.0.1920.1040/1920.-348.2048.1112@1920.-348.2048.1112" timestamp="1607604836421" />
-    <state width="2005" height="245" key="GridCell.Tab.0.right" timestamp="1607604836421">
+    <state width="2005" height="322" key="GridCell.Tab.0.left/0.0.1920.1040/1920.-348.2048.1112@1920.-348.2048.1112" timestamp="1607763932674" />
+    <state width="2005" height="322" key="GridCell.Tab.0.right" timestamp="1607763932674">
       <screen x="1920" y="-348" width="2048" height="1112" />
     </state>
     <state width="1877" height="245" key="GridCell.Tab.0.right/0.0.1920.1040/1920.-348.2048.1112@0.0.1920.1040" timestamp="1607588399348" />
-    <state width="2005" height="245" key="GridCell.Tab.0.right/0.0.1920.1040/1920.-348.2048.1112@1920.-348.2048.1112" timestamp="1607604836421" />
-    <state width="980" height="286" key="GridCell.Tab.1.bottom" timestamp="1607499136592">
+    <state width="2005" height="322" key="GridCell.Tab.0.right/0.0.1920.1040/1920.-348.2048.1112@1920.-348.2048.1112" timestamp="1607763932674" />
+    <state width="2005" height="367" key="GridCell.Tab.1.bottom" timestamp="1607702827870">
       <screen x="1920" y="-348" width="2048" height="1112" />
     </state>
-    <state width="980" height="286" key="GridCell.Tab.1.bottom/0.0.1920.1040/1920.-348.2048.1112@1920.-348.2048.1112" timestamp="1607499136592" />
-    <state width="980" height="286" key="GridCell.Tab.1.center" timestamp="1607499136591">
+    <state width="2005" height="367" key="GridCell.Tab.1.bottom/0.0.1920.1040/1920.-348.2048.1112@1920.-348.2048.1112" timestamp="1607702827870" />
+    <state width="2005" height="367" key="GridCell.Tab.1.center" timestamp="1607702827870">
       <screen x="1920" y="-348" width="2048" height="1112" />
     </state>
-    <state width="980" height="286" key="GridCell.Tab.1.center/0.0.1920.1040/1920.-348.2048.1112@1920.-348.2048.1112" timestamp="1607499136591" />
-    <state width="980" height="286" key="GridCell.Tab.1.left" timestamp="1607499136591">
+    <state width="2005" height="367" key="GridCell.Tab.1.center/0.0.1920.1040/1920.-348.2048.1112@1920.-348.2048.1112" timestamp="1607702827870" />
+    <state width="2005" height="367" key="GridCell.Tab.1.left" timestamp="1607702827870">
       <screen x="1920" y="-348" width="2048" height="1112" />
     </state>
-    <state width="980" height="286" key="GridCell.Tab.1.left/0.0.1920.1040/1920.-348.2048.1112@1920.-348.2048.1112" timestamp="1607499136591" />
-    <state width="980" height="286" key="GridCell.Tab.1.right" timestamp="1607499136591">
+    <state width="2005" height="367" key="GridCell.Tab.1.left/0.0.1920.1040/1920.-348.2048.1112@1920.-348.2048.1112" timestamp="1607702827870" />
+    <state width="2005" height="367" key="GridCell.Tab.1.right" timestamp="1607702827870">
       <screen x="1920" y="-348" width="2048" height="1112" />
     </state>
-    <state width="980" height="286" key="GridCell.Tab.1.right/0.0.1920.1040/1920.-348.2048.1112@1920.-348.2048.1112" timestamp="1607499136591" />
-    <state x="3049" y="-73" key="Vcs.Push.Dialog.v2" timestamp="1607328730179">
+    <state width="2005" height="367" key="GridCell.Tab.1.right/0.0.1920.1040/1920.-348.2048.1112@1920.-348.2048.1112" timestamp="1607702827870" />
+    <state x="3049" y="-73" key="Vcs.Push.Dialog.v2" timestamp="1607653369666">
       <screen x="1920" y="-348" width="2048" height="1112" />
     </state>
-    <state x="3049" y="-73" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.-348.2048.1112@1920.-348.2048.1112" timestamp="1607328730179" />
+    <state x="3049" y="-73" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.-348.2048.1112@1920.-348.2048.1112" timestamp="1607653369666" />
     <state x="3262" y="121" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1607653343611">
       <screen x="1920" y="-348" width="2048" height="1112" />
     </state>
@@ -262,6 +270,11 @@
           <url>file://$PROJECT_DIR$/src/util/ListNode.java</url>
           <line>36</line>
           <option name="timeStamp" value="17" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/leetcode/listnode/medium/ReverseLinkedList2.java</url>
+          <line>41</line>
+          <option name="timeStamp" value="18" />
         </line-breakpoint>
         <breakpoint enabled="true" type="java-exception">
           <properties class="java.lang.NullPointerException" package="java.lang" />
