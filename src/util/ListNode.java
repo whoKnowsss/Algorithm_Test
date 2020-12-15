@@ -67,14 +67,31 @@ public class ListNode implements Cloneable {
 
     //   1 -> 2 -> 3 -> 4 -> 5
     //通过递归 反转 返回头节点   翻转链表前n个节点
-    ListNode temp = null;
+    static ListNode after = null;
 
     public static ListNode reverseRecursive(ListNode head, int n) {
-        if (head.next == null || n == 1) return head;  //base case
+        if (n == 1) {   //base case
+            after = head.next; //记录第n+1个节点
+            return head;
+        }
+        //以 head.next 为起点，需要翻转前 n-1 个节点
         ListNode last = reverseRecursive(head.next, n - 1);
         head.next.next = head;
-        head.next = null;
+        //让翻转之后的 head 节点和后面的节点连起来
+        head.next = after;
+
         return last;
+    }
+
+    //   1 -> 2 -> 3 -> 4 -> 5
+    //通过递归 反转 返回头节点   翻转链表[start,end]个节点
+    public static ListNode reverseBetween(ListNode head, int start, int end) {
+        if (start == 1) {   //base case
+            return reverseRecursive(head, end);
+        }
+        //前进到反转的起点触发 base case
+        head.next = reverseBetween(head.next, start - 1, end - 1);
+        return head;
     }
 
     public static void main(String[] args) {
@@ -93,7 +110,7 @@ public class ListNode implements Cloneable {
             System.out.println(clonedTemp);
             System.out.println(node);
 
-            System.out.println(reverseRecursive(clonedTemp));
+            System.out.println(reverseBetween(clonedTemp, 3,5));
         } catch (CloneNotSupportedException e) {
             e.printStackTrace();
         }
