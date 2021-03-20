@@ -1,6 +1,7 @@
 package util;
 
 import com.sun.deploy.panel.ITreeNode;
+import netscape.security.UserTarget;
 import sun.reflect.generics.tree.Tree;
 
 import java.util.ArrayList;
@@ -14,14 +15,22 @@ import java.util.Stack;
  * @Description:二叉树
  */
 public class TreeNode {
-    int val;
-    TreeNode left;
-    TreeNode right;
+    public int val;
+    public TreeNode left;
+    public TreeNode right;
 
-    TreeNode(int x) {
-        this.val = x;
+    TreeNode() {
     }
 
+    TreeNode(int val) {
+        this.val = val;
+    }
+
+    TreeNode(int val, TreeNode left, TreeNode right) {
+        this.val = val;
+        this.left = left;
+        this.right = right;
+    }
 
     //先序遍历
     public static TreeNode preOrder(TreeNode root) {
@@ -98,21 +107,23 @@ public class TreeNode {
     public static void inOrderFei(TreeNode root) {
 
         Stack<TreeNode> stack = new Stack<>();
-        TreeNode temp = null;
-        while (root != null || !stack.isEmpty()) {
-            if (root != null) {
-                stack.push(root);
-                root = root.left;
+        TreeNode temp = root;
+        while (temp != null || !stack.isEmpty()) {
+            if (temp != null) {
+                stack.push(temp);
+                temp = temp.left;
             } else {
                 //左侧已经遍历完毕，开始根
                 //do sth.
                 temp = stack.pop();
                 System.out.print(temp.val + "->");
-                root = temp.right;
+                temp = temp.right;
             }
         }
         System.out.println("");
     }
+
+
 
 
     //二叉树后序遍历，非递归
